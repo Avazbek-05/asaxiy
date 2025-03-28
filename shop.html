@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Корзина</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="icon" type="image/png" href="./imgs/img/asaxiy1.png" />
+    <link rel="stylesheet" href="./src/output.css" />
+  </head>
+  <body class="pb-20">
+    <div class="sticky top-0 bg-white z-50">
+      <header
+        class="shadow-[0_10px_30px_0_rgba(209,213,223,0.5)] w-full border-b-2 border-light-blue"
+      >
+        <div
+          class="container1 p-[18.5px_0_19.5px_0] flex items-center gap-3 justify-between"
+        >
+          <label class="hidden max-[900px]:block" for="check"
+            ><i
+              class="fa-solid fa-bars text-[26px] font-bold text-vivid-blue"
+            ></i>
+          </label>
+
+          <a href="./index.html"
+            ><img class="w-[130px] h-[32px]" src="./imgs/svg/log.svg" alt="log"
+          /></a>
+          <button
+            class="bg-vivid-blue w-fit flex items-center gap-2 p-[8px_20px] rounded-xl cursor-pointer max-[900px]:hidden"
+          >
+            <img
+              class="w-[17px] h-[10px]"
+              src="./imgs/svg/menu.svg"
+              alt="menu"
+            />
+            <span class="text-[14px] text-white cursor-pointer">Категории</span>
+          </button>
+          <div
+            class="border-2 rounded-[15px] border-vivid-blue w-[40%] flex items-center justify-between max-[1100px]:hidden"
+          >
+            <input
+              class="inputBtn pl-3 outline-none w-full bg-transparent border-none"
+              placeholder="Поиск..."
+              type="text"
+            />
+            <button
+              class="bg-vivid-blue p-[8px_13px] rounded-[0px_10px_10px_0] text-white text-[16px]"
+            >
+              Искать
+            </button>
+          </div>
+          <input type="checkbox" class="hidden" id="check" />
+          <div class="menu-bar flex items-center gap-6">
+            <label
+              for="check"
+              class="hidden max-[900px]:block absolute top-3 right-4 text-xl"
+              ><i class="fa-solid fa-xmark"></i
+            ></label>
+            <div
+              class="flex flex-col gap-1 items-center max-[900px]:flex-row max-[900px]:gap-2"
+            >
+              <img
+                class="w-[23px] h-5"
+                src="./imgs/img/Сравнение.png"
+                alt="Сравнение icon"
+              />
+              <a class="text-[12px] text-black max-[900px]:text-lg" href="#"
+                >Сравнение</a
+              >
+            </div>
+            <div
+              class="flex flex-col gap-1 items-center max-[900px]:flex-row max-[900px]:gap-2"
+            >
+              <img
+                class="w-[23px] h-5"
+                src="./imgs/img/Оплатить.png"
+                alt="Оплата icon"
+              />
+              <a class="text-[12px] text-black max-[900px]:text-lg" href="#"
+                >Оплатить</a
+              >
+            </div>
+            <div
+              class="flex flex-col gap-1 items-center max-[900px]:flex-row max-[900px]:gap-2"
+            >
+              <img
+                class="w-[23px] h-5"
+                src="./imgs/img/track.png"
+                alt="Отследить icon"
+              />
+              <a class="text-[12px] text-black max-[900px]:text-lg" href="#"
+                >Отследить</a
+              >
+            </div>
+            <div
+              class="flex flex-col gap-1 items-center max-[900px]:flex-row max-[900px]:gap-2"
+            >
+              <a href="./shop.html" class="relative"
+                ><img
+                  class="w-[23px] h-5"
+                  src="./imgs/img/kорзина.png"
+                  alt="Корзина icon"
+                />
+                <p
+                  class="counter  absolute bg-vivid-blue text-[12px] text-white w-5 h-5 top-[-10px] right-[-10px] rounded-full flex items-center justify-center"
+                >
+                  0
+                </p>
+              </a>
+              <a class="text-[12px] text-black max-[900px]:text-lg" href="#"
+                >Корзина</a
+              >
+            </div>
+            <div
+              class="flex flex-col gap-1 items-center max-[900px]:flex-row max-[900px]:gap-2"
+            >
+              <a href="#" class="relative">
+                <i class="fa-regular text-xl fa-heart"></i>
+                <p
+                class="counterLike absolute bg-vivid-blue text-[12px] text-white w-5 h-5 top-[-5px] right-[-10px] rounded-full flex items-center justify-center"
+              >
+                0
+              </p>
+              </a>
+              <a class="text-[12px] text-black max-[900px]:text-lg" href="#"
+                >Избранное</a
+              >
+            </div>
+            <div
+              class="flex flex-col gap-1 items-center max-[900px]:flex-row max-[900px]:gap-2 max-[900px]:hidden"
+            >
+              <img
+                class="w-[95px] h-4"
+                src="./imgs/img/language-uz.png"
+                alt="O'zbekcha icon"
+              />
+              <a class="text-[12px] text-black max-[900px]:text-lg" href="#"
+                >O'zbekcha</a
+              >
+            </div>
+            <div
+              class="flex flex-col gap-1 items-center max-[900px]:flex-row max-[900px]:gap-2"
+            >
+              <img
+                class="w-[15px] h-5"
+                src="./imgs/img/login.png"
+                alt="Войти icon"
+              />
+              <a class="text-[12px] text-black max-[900px]:text-lg" href="#"
+                >Войти</a
+              >
+            </div>
+          </div>
+          <button
+            class="bg-vivid-blue text-white p-[6px_14px] rounded-xl hover:bg-[#5555e1] hidden max-[900px]:block"
+          >
+            O'zbekcha
+          </button>
+        </div>
+      </header>
+      <!--  -->
+      <div class="container1 hidden max-[1100px]:block pt-2">
+        <div
+          class="border-2 rounded-[15px] border-vivid-blue w-full flex items-center justify-between"
+        >
+          <input
+            class="inputBtn pl-3 outline-none w-full bg-transparent border-none"
+            placeholder="Поиск..."
+            type="text"
+          />
+          <button
+            class="bg-vivid-blue p-[8px_13px] rounded-[0px_10px_10px_0] text-white text-[16px]"
+          >
+            Искать
+          </button>
+        </div>
+      </div>
+      <!-- header end -->
+      <section
+        class="shadow-[0_10px_30px_0_rgba(209,213,223,0.5)] bg-white max-[800px]:hidden"
+      >
+        <div class="container1 p-[17px_0]">
+          <ul class="flex items-center justify-between">
+            <li>
+              <a
+                class="text-charcoal-blue text-[15px] font-medium hover:text-vivid-blue"
+                href="#"
+                >Щедрый Рамадан</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-charcoal-blue text-[15px] font-medium hover:text-vivid-blue"
+                href="#"
+                >0-0-6</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-charcoal-blue text-[15px] font-medium hover:text-vivid-blue"
+                href="#"
+                >Смартфоны</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-charcoal-blue text-[15px] font-medium hover:text-vivid-blue"
+                href="#"
+                >Бытовая техника</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-charcoal-blue text-[15px] font-medium hover:text-vivid-blue"
+                href="#"
+                >Книги</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-charcoal-blue text-[15px] font-medium hover:text-vivid-blue"
+                href="#"
+                >Телевизоры</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-charcoal-blue text-[15px] font-medium hover:text-vivid-blue"
+                href="#"
+                >Ноутбуки</a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+    <section class="mt-8">
+      <div class="container1 flex flex-col gap-8">
+        <div class="flex items-center gap-2">
+          <a class="text-soft-steel text-[14px] font-medium" href="./index.html"
+            >Главная</a
+          >
+          <i class="fa-solid text-[11px] fa-chevron-right"></i>
+          <a class="text-black text-[14px] font-medium" href="#">Корзина</a>
+        </div>
+
+        <div class="flex flex-col gap-5">
+          <h2 class="text-2xl font-medium">Корзина</h2>
+          <button
+              class="bg-vivid-blue p-[8px_12px] rounded-xl text-[16px] w-fit text-white font-medium"
+            >
+              Стандартные покупки
+            </button>
+         
+        </div>
+      </div>
+    </section>
+    <section class="mt-7">
+      <div class="container1">
+        <!-- shops -->
+        <div
+          class="shops mt-6 flex flex-col gap-5"
+        >
+          
+          
+        </div>
+      </div>
+    </section>
+    <!-- shops end -->
+
+    <section class="bg-vivid-blue mt-20">
+      <div class="container1 py-12">
+        <div
+          class="shadow-[0_10px_30px_0_rgba(209,213,223,0.5)] bg-white p-[42px_48px] max-[400px]:p-5 rounded-3xl grid grid-cols-4 gap-10 max-[1320px]:gap-5 max-[1205px]:grid-cols-2 max-[700px]:grid-cols-1"
+        >
+          <!-- 1 -->
+          <div class="flex items-center gap-7 max-[350px]:flex-col">
+            <img src="./imgs/img/box1.png" alt="box1" />
+            <div class="max-[350px]:text-center">
+              <h3 class="text-[16px] font-semibold text-charcoal-blue">
+                Больше не нужно ходить на базар
+              </h3>
+              <p class="text-[14px] text-text-color">
+                У нас выгодные цены и доставка до дома
+              </p>
+            </div>
+          </div>
+          <!-- 2 -->
+          <div class="flex items-center gap-7 max-[350px]:flex-col">
+            <img src="./imgs/img/box2.png" alt="box1" />
+            <div class="max-[350px]:text-center">
+              <h3 class="text-[16px] font-semibold text-charcoal-blue">
+                Быстрая доставка
+              </h3>
+              <p class="text-[14px] text-text-color">Наш сервис удивит вас</p>
+            </div>
+          </div>
+          <!-- 3 -->
+          <div class="flex items-center gap-7 max-[350px]:flex-col">
+            <img src="./imgs/img/box3.png" alt="box1" />
+            <div class="max-[350px]:text-center">
+              <h3 class="text-[16px] font-semibold text-charcoal-blue">
+                Удобства для вас
+              </h3>
+              <p class="text-[14px] text-text-color">
+                Быстрое оформление и гарантия на возврат в случае неисправности
+              </p>
+            </div>
+          </div>
+          <!-- 4 -->
+          <div class="flex items-center gap-7 max-[350px]:flex-col">
+            <img src="./imgs/img/box4.png" alt="box1" />
+            <div class="max-[350px]:text-center">
+              <h3 class="text-[16px] font-semibold text-charcoal-blue">
+                Рассрочка
+              </h3>
+              <p class="text-[14px] text-text-color">
+                Без предоплаты на 3, 6 или 12 месяцев
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="py-10">
+      <div class="container1">
+        <div
+          class="grid grid-cols-4 gap-5 max-[1152px]:grid-cols-2 max-[600px]:grid-cols-1"
+        >
+          <!-- 1 -->
+          <div class="flex flex-col gap-[16px] max-[600px]:text-center">
+            <h2 class="text-black text-xl font-bold">Информация</h2>
+            <div class="flex flex-col gap-3">
+              <a
+                class="text-blue-gray text-[16px] font-medium hover:text-vivid-blue"
+                href="https://asaxiy.uz/page/faq"
+                >Часто задаваемые вопросы</a
+              >
+              <a
+                class="text-blue-gray text-[16px] font-medium hover:text-vivid-blue"
+                href="#"
+                >Новости</a
+              >
+              <a
+                class="text-blue-gray text-[16px] font-medium hover:text-vivid-blue"
+                href="#"
+                >Блог</a
+              >
+              <a
+                class="text-blue-gray text-[16px] font-medium hover:text-vivid-blue"
+                href="#"
+                >Наши бренды</a
+              >
+              <a
+                class="text-blue-gray text-[16px] font-medium hover:text-vivid-blue"
+                href="#"
+                >Карьера в Asaxiy</a
+              >
+              <a
+                class="text-blue-gray text-[16px] font-medium hover:text-vivid-blue"
+                href="#"
+                >Оферта для рассрочку</a
+              >
+              <a
+                class="text-blue-gray text-[16px] font-medium hover:text-vivid-blue"
+                href="#"
+                >Публичная оферта</a
+              >
+              <a
+                class="text-blue-gray text-[16px] font-medium hover:text-vivid-blue"
+                href="#"
+                >О нас</a
+              >
+              <a
+                class="text-blue-gray text-[16px] font-medium hover:text-vivid-blue"
+                href="#"
+                >Карта сайта</a
+              >
+            </div>
+          </div>
+          <!-- 2 -->
+          <div
+            class="flex flex-col gap-4 max-[600px]:items-center max-[600px]:text-center"
+          >
+            <h2 class="text-black text-xl font-bold">Информация</h2>
+            <div
+              class="flex flex-col gap-3 max-[600px]:items-center max-[600px]:text-center"
+            >
+              <div class="flex items-center gap-2">
+                <img src="./imgs/svg/tel.svg" alt="tel icon" />
+                <a
+                  class="text-blue-gray text-[16px] font-medium hover:text-vivid-blue"
+                  href="tel: +998 71 200 01 05"
+                >
+                  +998 71 200 01 05</a
+                >
+              </div>
+              <div class="flex items-center gap-2">
+                <img src="./imgs/svg/message.svg" alt="message icon" />
+                <a
+                  class="text-blue-gray text-[16px] font-medium hover:text-vivid-blue"
+                  href="mailto:info@asaxiy.uz"
+                >
+                  info@asaxiy.uz</a
+                >
+              </div>
+              <div class="flex items-center gap-2">
+                <img src="./imgs/svg/telegram.svg" alt="telegram icon" />
+                <a
+                  class="text-blue-gray text-[16px] font-medium hover:text-vivid-blue"
+                  href="https://t.me/asaxiybot"
+                >
+                  Telegram bot</a
+                >
+              </div>
+              <div class="flex items-center gap-2">
+                <img src="./imgs/svg/ lactation.svg" alt="lactation icon" />
+                <a
+                  class="text-blue-gray text-[16px] font-medium hover:text-vivid-blue"
+                  href="https://www.google.com/maps/search/41.284272,+69.224530?entry=tts&g_ep=EgoyMDI0MTIxMC4wIPu8ASoASAFQAw%3D%3D"
+                >
+                  улица Чиланзар 45/2, Ташкент</a
+                >
+              </div>
+            </div>
+            <h2 class="text-black text-xl font-bold pt-2">
+              Программы лояльности
+            </h2>
+            <div class="flex flex-col gap-3">
+              <a
+                class="text-blue-gray text-[16px] font-medium hover:text-vivid-blue"
+                href="https://asaxiy.uz/page/el-yurt-ishonchi"
+                >Статус «El-yurt ishonchi»</a
+              >
+              <a
+                class="text-blue-gray text-[16px] font-medium hover:text-vivid-blue"
+                href="#"
+                >«Asaxiy Plus»</a
+              >
+              <a
+                class="text-blue-gray text-[16px] font-medium hover:text-vivid-blue"
+                href="#"
+                >Оферта «Asaxiy Plus»</a
+              >
+            </div>
+          </div>
+          <!-- 3 -->
+          <div class="flex flex-col gap-6">
+            <h2 class="text-black text-xl font-bold max-[600px]:text-center">
+              Доставка и магазины
+            </h2>
+            <div class="flex flex-col gap-2 max-[600px]:w-full">
+              <a
+                href="https://www.google.com/maps/d/u/0/viewer?mid=1R5cL_79kiW9_CaeJVvCfswbKeU-hetc&ll=40.559568485901295%2C66.87988510000002&z=8"
+              >
+                <div
+                  class="flex items-center gap-7 justify-between bg-light-gray p-4 w-fit rounded-lg max-[600px]:w-full"
+                >
+                  <img src="./imgs/svg/home.svg" alt="home" />
+                  <h3
+                    class="text-[15px] font-semibold text-dark-blue hover:text-vivid-blue"
+                  >
+                    Наши магазины
+                  </h3>
+                  <i class="fa-solid text-xl fa-angle-right"></i>
+                </div>
+              </a>
+              <a
+                href="https://www.google.com/maps/d/u/0/viewer?mid=1R5cL_79kiW9_CaeJVvCfswbKeU-hetc&ll=40.559568485901295%2C66.87988510000002&z=8"
+              >
+                <div
+                  class="flex items-center justify-between gap-7 bg-light-gray p-4 w-fit rounded-lg max-[600px]:w-full"
+                >
+                  <img src="./imgs/svg/locashin.svg" alt="home" />
+                  <h3
+                    class="text-[15px] font-semibold text-dark-blue hover:text-vivid-blue"
+                  >
+                    Пункты выдачи
+                  </h3>
+                  <i class="fa-solid text-xl fa-angle-right"></i>
+                </div>
+              </a>
+              <a href="https://asaxiy.uz/page/delivery-points">
+                <div
+                  class="flex items-center justify-between gap-7 bg-light-gray p-4 max-w-[246px] rounded-lg max-[600px]:max-w-full"
+                >
+                  <img src="./imgs/svg/car.svg" alt="home" />
+                  <h3
+                    class="text-[15px] font-semibold text-dark-blue hover:text-vivid-blue"
+                  >
+                    Доставка
+                  </h3>
+                  <i class="fa-solid text-xl fa-angle-right"></i>
+                </div>
+              </a>
+            </div>
+          </div>
+          <!-- 4 -->
+          <div class="flex flex-col gap-4">
+            <h2 class="text-black text-xl font-bold max-[600px]:text-center">
+              Виды оплаты
+            </h2>
+            <div class="grid grid-cols-2 gap-4 max-[400px]:grid-cols-1">
+              <button
+                class="bg-light-gray hover:bg-[#d2cbcb] p-[17px_40px] rounded-lg flex items-center justify-center"
+              >
+                <img src="./imgs/img/uzum.png " alt="uzum img" />
+              </button>
+              <button
+                class="bg-light-gray hover:bg-[#d2cbcb] p-[17px_40px] rounded-lg flex items-center justify-center"
+              >
+                <img src="./imgs/img/payme.png " alt="payme img" />
+              </button>
+              <button
+                class="bg-light-gray hover:bg-[#d2cbcb] p-[17px_40px] rounded-lg flex items-center justify-center"
+              >
+                <img src="./imgs/img/visa.png " alt="visa img" />
+              </button>
+
+              <button
+                class="bg-light-gray hover:bg-[#d2cbcb] p-[17px_40px] rounded-lg flex items-center justify-center"
+              >
+                <img src="./imgs/img/mastercard.png " alt="mastercard img" />
+              </button>
+              <button
+                class="bg-light-gray hover:bg-[#d2cbcb] p-[17px_40px] rounded-lg flex items-center justify-center"
+              >
+                <img src="./imgs/img/humo.png " alt="humo img" />
+              </button>
+              <button
+                class="bg-light-gray hover:bg-[#d2cbcb] p-[17px_40px] rounded-lg flex items-center justify-center"
+              >
+                <img src="./imgs/img/uzcard.png " alt="uzcard img" />
+              </button>
+            </div>
+            <h2
+              class="text-black text-xl font-bold p-2 max-[600px]:text-center"
+            >
+              Мы в соц. сетях
+            </h2>
+
+            <div class="flex items-center gap-4 max-[600px]:justify-center">
+              <i
+                class="fa-brands text-2xl hover:text-vivid-blue fa-facebook"
+              ></i>
+              <i
+                class="fa-brands text-2xl hover:text-vivid-blue fa-telegram"
+              ></i>
+              <i
+                class="fa-brands text-2xl hover:text-vivid-blue fa-instagram"
+              ></i>
+              <i
+                class="fa-brands text-2xl hover:text-vivid-blue fa-youtube"
+              ></i>
+              <i class="fa-solid text-2xl hover:text-vivid-blue fa-wifi"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="./js/shop.js"></script>
+  </body>
+</html>

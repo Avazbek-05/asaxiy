@@ -1,0 +1,49 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Смартфон HONOR X9c Smart 8/256 5G (Ocean Cyan)",
+      "price": 3849000,
+      "oldPrice": 2459000,
+      "rate": "5 отзывов",
+      "moth": 320800,
+      "img": "https://cdn.asaxiy.uz/asaxiy-content/product/main_image/desktop/678246facc2e8.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Смартфон Honor X7c 8/256GBЧерный",
+      "price": 2349000,
+      "rate": "2 отзывов",
+      "oldPrice": 2659000,
+      "moth": 285800,
+      "img": "https://cdn.asaxiy.uz/asaxiy-content/product/main_image/desktop/6712377903878.webp"
+    },
+    {
+      "id": 3,
+      "title": "Смартфон Xiaomi Redmi Note 14 Pro 8/256GB Midnight Black. ХИТ ПРОДАЖ!",
+      "price": 3849000,
+      "oldPrice": 3489000,
+      "rate": "2 отзывов",
+      "moth": 424500,
+      "img": "https://cdn.asaxiy.uz/asaxiy-content/product/main_image/desktop/6787ad7fdf19d.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Смартфон Redmi Note 146/128GB Midnight Black",
+      "price": 2189000,
+      "oldPrice": 2459000,
+      "rate": "1 отзывов",
+      "moth": 66400,
+      "img": "https://cdn.asaxiy.uz/asaxiy-content/product/main_image/desktop/6787a133e6ae6.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Смартфон HONOR X9c Smart 8/256 5G черный (Midnight Black)",
+      "price": 3849000,
+      "oldPrice": 2459000,
+      "rate": "0 отзывов",
+      "moth": 320800,
+      "img": "https://cdn.asaxiy.uz/asaxiy-content/product/items/desktop/878f163c27e29e5b9fc7400c7835a25e2025022221423152813wKAsH3r2qg.jpg"
+    }
+  ]
+}

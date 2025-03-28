@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container1 {
+  width: 90%;
+  margin: 0 auto;
+}
+@media (min-width: 1400px) {
+  .container1 {
+    width: 1350px;
+    margin: 0 auto;
+  }
+}
+
+.inputBtn {
+  background-color: transparent;
+}
+@media (max-width: 900px) {
+  .menu-bar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.7s ease;
+    row-gap: 30px;
+    z-index: 999;
+  }
+  #check:checked ~ .menu-bar {
+    left: 0;
+  }
+}
+
