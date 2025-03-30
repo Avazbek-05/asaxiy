@@ -75,5 +75,4 @@ function addUIData(value,cards) {
 }
 
 
-
 export { useFetch, addUIData };

@@ -5,7 +5,11 @@ const request = useFetch();
 
 let cart = JSON.parse(localStorage.getItem("cards")) || [];
 updateCounter();
-request({ url: "asaxiy" }).then((data) => getData(data));
+request({ url: "asaxiy" }).then((data) => getData(data));  
+// const getDataAsync = async () => {
+//   let respose = await request({ url: "asaxiy" });
+//   return respose ;
+// };
 
 function getData(data) {
   data.forEach((value) => {
@@ -31,7 +35,7 @@ function addToCard(data) {
     return;
   }
 
- cart=[...cart,{...data,count:1}]
+  cart = [...cart, { ...data, count: 1 }];
   localStorage.setItem("cards", JSON.stringify(cart));
   updateCounter();
 }
