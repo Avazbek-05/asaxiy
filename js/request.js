@@ -13,7 +13,7 @@ const useFetch = () => {
   return response;
 };
 
-function addUIData(value,cards) {
+function addUIData(value, cards) {
   cards.innerHTML += `
   <div
     class="card shadow-[0_10px_30px_0_rgba(209,213,223,0.5)] p-4 rounded-2xl relative transition-all duration-300 hover:shadow-[0_15px_40px_0_rgba(209,213,223,0.8)] hover:scale-105 hover:border hover:border-[#00BFaf]"
@@ -26,7 +26,8 @@ function addUIData(value,cards) {
       />
     </div>
     <div class="flex flex-col items-center gap-1 absolute right-3 top-14">
-      <i class="fa-regular hover:text-[red] text-xl fa-heart"></i>
+      <i id=${
+        value.id} class="fa-regular hover:text-[red] text-xl fa-heart"></i>
       <img
         class="w-6 h-6"
         src="./imgs/img/Сравнение.png"
@@ -73,6 +74,5 @@ function addUIData(value,cards) {
   </div>
 `;
 }
-
 
 export { useFetch, addUIData };
